@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- * main - Entry point
+ * main - entry point
  *
- * Return: Always 0 (Success)
+ * Return: always 0 (success)
  */
 int main(void)
 {
@@ -23,7 +24,7 @@ printf("Last digit of ");
 printf("%d ", n);
 printf("is %d and is 0 \n", n % 10);
 }
-else if ((n % 10) < 6)
+else if ((n % 10) < 5)
 {
 printf("Last digit of ");
 printf("%d ", n % 10);
