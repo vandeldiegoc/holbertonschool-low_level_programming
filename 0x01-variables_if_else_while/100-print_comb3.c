@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - entry point
+ *
  * Return: always 0 (success)
  */
 int main(void)
@@ -13,13 +14,13 @@ while (c <= 9)
 h = (c + 1);
 while (h <= 9)
 {
-if (c != 9 || h != 9)
+putchar('0' + c);
+putchar('0' + h);
+if (c != 8 || h != 9)
 {
 putchar(',');
 putchar(' ');
 }
-putchar('0' + c);
-putchar('0' + h);
 h++;
 }
 c++;
