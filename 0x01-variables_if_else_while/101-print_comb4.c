@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
-* main - entry point
-*
-* Return: always 0 (success)
-*/
+ * main - entry point
+ *
+ * Return: always 0 (success)
+ */
 int main(void)
 {
 int c;
@@ -21,7 +21,7 @@ while (h <= 9)
 putchar('0' + a);
 putchar('0' + c);
 putchar('0' + h);
-if (a != 7 | c != 8 || h != 9)
+if (a != 7 || c != 8 || h != 9)
 {
 putchar(',');
 putchar(' ');
