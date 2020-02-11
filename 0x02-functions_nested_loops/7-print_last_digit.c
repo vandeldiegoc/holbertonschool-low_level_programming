@@ -1,10 +1,9 @@
 #include "holberton.h"
 /**
 * print_last_digit - is a funcion.
-* @a : is a variable.
-* Return: j.
+* @j : is a variable.
+* Return: c .
 */
-
 int print_last_digit(int j)
 {
 int c;
