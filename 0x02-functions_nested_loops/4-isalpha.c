@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- * _isalpha - check the code for Holberton School students.
- *
- * Return: Always 0.
+ *_islower -  is a funcion
+ *@c: is a variable
+ *Return: 1 if c is lowercase,  0 otherwise
  */
 int _isalpha(int c)
 {
