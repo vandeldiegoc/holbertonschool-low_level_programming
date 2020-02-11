@@ -1,18 +1,18 @@
 #include "holberton.h"
 /**
- * _islower - Entry point
- *
- * Return: Always 0 (Success)
+ *_islower -  is a funcion
+ *@c: is a variable
+ *Return: 1 if c is lowercase,  0 otherwise
  */
 int _islower(int c)
 {
-if (c >= 'a' && c <= 'z')
+int e = c;
+if (e >= 'a' && e <= 'z')
 {
-return(1); 
+return (1);
 }
 else
 {
-return(0);
+return (0);
 }
-_putchar('\n');
 }
