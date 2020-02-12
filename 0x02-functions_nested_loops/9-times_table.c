@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * times_table - function that prints the 9 times table
- * @void: no argument
+ * times_table -is a function
+ * @void: is a variable
  */
 void times_table(void)
 {
