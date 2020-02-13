@@ -1,0 +1,24 @@
+#include "holberton.h"
+/**
+ * print_diagonal -  is a funcion
+ *@n: is a variable
+ */
+void print_diagonal(int n)
+{
+int y;
+int h;
+for (y = 0; y < n; y++)
+{	
+for (h = 0; h < y; h++)	
+{	
+_putchar(' ');
+}
+_putchar('\\');
+if (y >= 0)
+{
+_putchar('\n');
+}
+}
+_putchar('\n');
+}
+
