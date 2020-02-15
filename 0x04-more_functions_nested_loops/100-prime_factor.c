@@ -9,7 +9,7 @@
 int main(void)
 {
 long long a = 612852475143;
-int b = 0;
+long b = 0;
 int c;
 while (a % 2 == 0)
 {
@@ -25,6 +25,6 @@ a /= c;
 }
 c += 2;
 }
-printf("%d\n", b);
+printf("%li\n", b);
 return (0);
 }
