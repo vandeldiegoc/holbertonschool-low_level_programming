@@ -15,7 +15,8 @@ while (a != b)
 if (b % a == 0)
 {
 b = b / a;
-} else
+}
+else
 {
 a++;
 }
