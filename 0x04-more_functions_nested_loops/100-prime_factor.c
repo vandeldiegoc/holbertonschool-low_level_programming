@@ -8,23 +8,18 @@
  */
 int main(void)
 {
-long long a = 612852475143;
-long b = 0;
-int c;
-while (a % 2 == 0)
+unsigned int a = 2;
+unsigned long b = 612852475143;
+while (a != b)
 {
-b = 2;
-a /= 2;
-}
-while (a != 1)
+if (b % a == 0)
 {
-while (a % c == 0)
+b = b / a;
+} else
 {
-b = c;
-a /= c;
+a++;
 }
-c += 2;
 }
-printf("%li\n", b);
+printf("%lu\n", b);
 return (0);
 }
