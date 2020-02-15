@@ -26,4 +26,5 @@ a /= c;
 c += 2;
 }
 printf("%d\n", b);
-
+return (0);
+}
