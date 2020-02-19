@@ -1,5 +1,4 @@
 #include "holberton.h"
-include "holberton.h"
 /**
  * puts2 -  is a funcion
  * @str: pointer to a  str
