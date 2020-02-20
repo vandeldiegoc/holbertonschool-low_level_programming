@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * puts_half -  is a funcion
- * @s: string
+ * @str: string
  */
 void puts_half(char *str)
 {
