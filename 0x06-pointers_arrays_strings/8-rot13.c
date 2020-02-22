@@ -7,8 +7,8 @@
 char *rot13(char *s)
 {
 int a, b;
-char alfa[] = "abcdefghijklmnopqrstuvwxyz";
-char beta[] = "nopqrstuvwxyzabcdefghijklmi";
+char alfa[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char beta[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
 for (a = 0; s[a] != 0; a++)
 {
 for (b = 0; alfa[b] != 0; b++)
