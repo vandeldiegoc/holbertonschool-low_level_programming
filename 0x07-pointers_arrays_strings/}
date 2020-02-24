@@ -17,12 +17,9 @@ return (s + a);
 }
 
 }
-if (s[a] == c)
+if (s[i] == c)
 {
 return (s + a);
 }
-else
-{
-return (0);
-}
+return (s);
 }
