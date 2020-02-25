@@ -10,7 +10,7 @@ char *_strstr(char *haystack, char *needle)
 {
 int a = 0;
 int b;
-int ciclo; 
+int ciclo;
 while (haystack[a] != 0)
 {
 ciclo = a;
