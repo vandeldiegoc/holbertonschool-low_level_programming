@@ -6,19 +6,23 @@
  * @haystack: is a variable
  * Return: haystack
  */
-
 char *_strstr(char *haystack, char *needle)
 {
-while (*haystack)
+int a = 0;
+int b;
+int ciclo; 
+while (haystack[a] != 0)
 {
-while (*haystack && *haystack == *needle)
+ciclo = a;
+b = 0;
+while (needle[b] == haystack[a] && haystack[a] != 0 && haystack[a] != 0)
 {
-haystack++;
-needle++;
+a++;
+b++;
 }
-if (*needle != 0)
-return (haystack);
-haystack++;
+if (needle[b] == 0)
+return (haystack + ciclo);
+a = ciclo + 1;
 }
 return (0);
 }
