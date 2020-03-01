@@ -8,16 +8,16 @@
  */
 int main(int argc, char *argv[])
 {
-int a, multi;
-for (a = 1; a < argc; a++)
+int multi;
+if (argc == 3)
 {
 multi = atoi(argv[1]) * atoi(argv[2]);
+printf("%d\n", multi);
+return (0);
 }
-if (argc != 3)
+else
 {
 printf("Error\n");
 return (1);
 }
-printf("%d\n", multi);
-return (0);
 }
