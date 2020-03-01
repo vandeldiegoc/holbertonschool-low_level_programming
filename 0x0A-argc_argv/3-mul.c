@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 int a, multi;
-for (a = 0; a < argc; a++)
+for (a = 1; a < argc; a++)
 {
 multi = atoi(argv[1]) * atoi(argv[2]);
 }
