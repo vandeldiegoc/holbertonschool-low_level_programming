@@ -1,0 +1,22 @@
+#include <stdlib.h>
+/**
+ * *create_array-  is a funcion
+ * @size: is a variable
+ * @c: is a variable
+ * Return: 0
+ */
+char *create_array(unsigned int size, char c)
+{
+unsigned int a;
+char *diego;
+diego = malloc(size * sizeof(c));
+if (size == 0)
+{
+return ('\0');
+}
+for (a = 0; a <= size; a++)
+{
+diego[a] = c;
+}
+return (diego);
+}
