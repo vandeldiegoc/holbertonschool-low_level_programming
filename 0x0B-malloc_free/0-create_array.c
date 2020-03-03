@@ -14,7 +14,7 @@ if (size == 0)
 {
 return ('\0');
 }
-for (a = 0; a <= size; a++)
+for (a = 0; a < size; a++)
 {
 diego[a] = c;
 }
