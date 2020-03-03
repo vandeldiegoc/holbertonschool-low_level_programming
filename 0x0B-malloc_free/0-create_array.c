@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include "holberton.h"
 /**
  * *create_array-  is a funcion
  * @size: is a variable
