@@ -16,6 +16,10 @@ if (size == 0)
 {
 return (NULL);
 }
+if ( diego == 0)
+{	
+return (NULL);
+}
 for (a = 0; a < size; a++)
 {
 diego[a] = c;
