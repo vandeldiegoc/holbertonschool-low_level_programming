@@ -14,10 +14,10 @@ char *str_concat(char *s1, char *s2)
 int c, b, s, j;
 char *p;
 if (s1 == NULL)
-return (NULL);
+s1 = "";
 if (s2 == NULL)
 {
-return (NULL);
+s2 = "";
 }
 for (c = 0; s1[c] != 0; c++)
 ;
@@ -36,5 +36,7 @@ for (j = 0; s2[j] != 0; j++)
 {
 p[s + j] = s2[j];
 }
+p[(s + j)+ 1] = 0;
+
 return (p);
 }
