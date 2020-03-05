@@ -20,7 +20,8 @@ for (b = 0; s2[b] != '\0'; b++)
 ;
 if (n >= b)
 n = b;
-ptr = malloc(1 + (a + n) * sizeof(*ptr));
+
+ptr = malloc(1 + (a + n)  *sizeof(*ptr));
 if (ptr == NULL)
 return (NULL);
 for (a = 0; s1[a] != '\0'; a++)
