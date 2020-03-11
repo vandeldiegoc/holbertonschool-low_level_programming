@@ -1,22 +1,19 @@
 #include "dog.h"
 /**
- * init_dog - Short description
- * @name:i First member
- * @age: Second member
- * @owner: Third member
+ * print_dog - Short description
  * @d: Third member
  *
  * Description: Longer description
  */
-void print_dog(struct dog *d);
+void print_dog(struct dog *d)
 {
 if (d == NULL)
-return (0);
+return;
 if ((*d).name == NULL)
-printf ("NIL");
-if ((*d).age == NULL)	
-printf ("NIL");
-if ((*d).owner == NULL)	
-printf ("NIL");
-
+(*d).name = "(nil)";
+if ((*d).owner == NULL)
+(*d).owner = "(nil)";
+printf("Name: %s\n", (*d).name);
+printf("Age: %f\n", (*d).age);
+printf("Owner: %s\n", (*d).owner);
 }
