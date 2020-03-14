@@ -11,13 +11,14 @@ unsigned int f;
 char *a;
 va_list v_l;
 va_start(v_l, n);
+
 for (f = 0; f < n; f++)
 {
 a = va_arg(v_l, char *);
 if (a != NULL)
 {
 printf("%s", a);
-if (f != (n - 1))
+if (separator != NULL && f != (n - 1))
 {
 printf("%s", separator);
 }
@@ -25,7 +26,7 @@ printf("%s", separator);
 else
 {
 printf("(nil)");
-if (f != (n - 1))
+if (separator != NULL && f != (n - 1))
 {
 printf("%s", separator);
 }
