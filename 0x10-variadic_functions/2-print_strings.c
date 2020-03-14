@@ -17,16 +17,22 @@ a = va_arg(v_l, char *);
 if (a != NULL)
 {
 printf("%s", a);
-}
-else
-{
-printf("nill");
-}
 if (f != (n - 1))
 {
 printf("%s", separator);
 }
 }
+else
+{
+printf("(nil)");
+if (f != (n - 1))
+{
+printf("%s", separator);
+}
+
+}
+}
+va_end(v_l);
 printf("\n");
 }
 
