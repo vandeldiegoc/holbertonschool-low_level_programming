@@ -9,7 +9,7 @@
  * @op: The operator
 	 * @f: The function associated
  */
-typedef struct type
+typedef struct ops
 {
     char *op;
     void (*f)(va_list);
