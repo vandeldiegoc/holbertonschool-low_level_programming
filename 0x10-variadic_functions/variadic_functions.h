@@ -7,12 +7,12 @@
  * struct op - Struct op
  *
  * @op: The operator
- * @f: The function associated
+	 * @f: The function associated
  */
-typedef struct op
+typedef struct type
 {
     char *op;
-    void (*f)();
+    void (*f)(va_list);
 } op_t;
 
 int sum_them_all(const unsigned int n, ...);
