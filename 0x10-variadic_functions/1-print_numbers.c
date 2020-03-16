@@ -19,6 +19,6 @@ if (separator != NULL && f != (n - 1))
 printf("%s", separator);
 }
 va_end(v_l);
+}
 printf("\n");
 }
-
