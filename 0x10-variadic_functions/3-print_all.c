@@ -85,6 +85,9 @@ i++;
 }
 j++;
 }
+
 va_end(list);
+printf("\n");
+
 }
 

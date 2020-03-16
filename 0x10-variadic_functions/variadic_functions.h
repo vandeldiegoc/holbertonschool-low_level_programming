@@ -15,9 +15,13 @@ void print_all(const char * const format, ...);
  * @op: The operator
 	 * @f: The function associated
  */
+<<<<<<< HEAD
 
 
 typedef struct op
+=======
+typedef struct ops
+>>>>>>> e82d0401fc991e448f7e52eea58c5dfa2cbb9639
 {
   char *op;
   void (*f) ();
