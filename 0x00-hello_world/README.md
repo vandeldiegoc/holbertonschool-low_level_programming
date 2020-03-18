@@ -1,9 +1,7 @@
 
-#<strong>
-Project Printf
-</strong>
+ng>Project Printf</strong>
 
-## Authorized functions and macros
+ Authorized functions and macros
 
     write (man 2 write)
     malloc (man 3 malloc)
@@ -13,21 +11,25 @@ Project Printf
     va_copy (man 3 va_copy)
     va_arg (man 3 va_arg)
 
-##files
-###_putchar.c
+files
+_putchar.c
 in this fiile threre is a funcion for print character
-###functions.c
+functions.c
 int _print_int(int num) print number and return lent
 int _print_char(va_list list) print character  and return return (_putchar(va_arg(list, int)));
 int _print_str(va_list list) print string and return lent
-###functions1.c
-_print_binary - function that receives a number for convert to binary 0
-###get_functions.c
-get_functions(char format, va_list list)- look for the function
-###holberton.h
-it has the prototypes of the functions and the structure
-###man_3_printf
-man page _print
-###printf.c
-int _printf(const char *format, ...)receives the arguments and calls the functions
 
+functions1.c
+_print_binary - function that receives a number for convert to binary 0
+
+get_functions.c
+get_functions(char format, va_list list)- look for the function
+
+holberton.h
+it has the prototypes of the functions and the structure
+
+man_3_printf
+man page _print
+
+printf.c
+int _printf(const char *format, ...)receives the arguments and calls the functions.
