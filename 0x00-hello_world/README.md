@@ -1,7 +1,7 @@
 
-ng>Project Printf</strong>
+# ng>Project Printf</strong>
 
- Authorized functions and macros
+## Authorized functions and macros
 
     write (man 2 write)
     malloc (man 3 malloc)
@@ -11,7 +11,7 @@ ng>Project Printf</strong>
     va_copy (man 3 va_copy)
     va_arg (man 3 va_arg)
 
-# files
+### files
 _putchar.c
 in this fiile threre is a funcion for print character
 functions.c
