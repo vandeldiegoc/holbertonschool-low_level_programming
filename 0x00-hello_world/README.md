@@ -11,7 +11,7 @@ ng>Project Printf</strong>
     va_copy (man 3 va_copy)
     va_arg (man 3 va_arg)
 
-files
+# files
 _putchar.c
 in this fiile threre is a funcion for print character
 functions.c
