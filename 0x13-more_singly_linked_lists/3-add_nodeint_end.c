@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * listint_t *add_nodeint_end(lidd_nodeint - add node in the end
+ * add_nodeint_end - add node in the end
  * @head: pointer head
  * @n: data inside n
  * Return: pointer new
