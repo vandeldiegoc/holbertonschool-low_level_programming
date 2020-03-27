@@ -1,9 +1,8 @@
 #include "holberton.h"
 
 /**
-* binary_to_uint - function that prints the binary representation of a numb
-* @b: is pointing to a  number
-* Return: void
+* print_binary - function that prints the binary representation of a numb
+* @n: is pointing to a  number
 **/
 
 void print_binary(unsigned long int n)
