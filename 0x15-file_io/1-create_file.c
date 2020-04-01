@@ -14,7 +14,7 @@ fb = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fb == -1)
 		return (-1);
 
-	for (num = 1; text_content[num] != 0; num++)
+	for (num = 1; text_content[num]; num++)
 		;
 	c = write(fb, text_content, num);
 		if (c == -1)
