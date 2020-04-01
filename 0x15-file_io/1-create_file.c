@@ -14,6 +14,11 @@ fb = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fb == -1)
 		return (-1);
 
+	if (text_content == NULL)
+	{
+		close(fb);
+		return (1);
+	}
 	for (num = 0; text_content[num]; num++)
 		;
 	c = write(fb, text_content, num);
