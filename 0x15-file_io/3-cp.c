@@ -25,14 +25,14 @@ exit(98);
 file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (file_to == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to1 %s\n", argv[2]);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 exit(99);
 }
 while ((rw = read(file_from, buff, 1024)))
 {
 
 wr =  write(file_to, buff, rw);
-if (wr == -1)
+if (wr != rw)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to3 %s\n", argv[2]);
 exit(99);
