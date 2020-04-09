@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-int file_from, file_to, rw, wr;
+int file_from, file_to, rw = 1024, wr;
 char buff[1024];
 if (argc != 3)
 {
@@ -28,15 +28,15 @@ if (file_to == -1)
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
 exit(99);
 }
-while ((rw = read(file_from, buff, 1024)))
-{
+while (rw == 1024)
+rw = read(file_from, buff, 1024);
 wr =  write(file_to, buff, rw);
 if (wr != rw)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
 exit(99);
 }
-}
+
 if (close(file_to) == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
