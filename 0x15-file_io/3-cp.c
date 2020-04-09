@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-int file_from, file_to, rw, wr = 0;
+int file_from, file_to, rw, wr;
 char buff[1024];
 if (argc != 3)
 {
@@ -30,7 +30,6 @@ exit(99);
 }
 while ((rw = read(file_from, buff, 1024)))
 {
-
 wr =  write(file_to, buff, rw);
 if (wr != rw)
 {
