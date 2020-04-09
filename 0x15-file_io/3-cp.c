@@ -38,9 +38,13 @@ dprintf(STDERR_FILENO, "Error: Can't write to3 %s\n", argv[2]);
 exit(99);
 }
 }
-if (close(file_to))
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
-if (close(file_from))
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
+if (close(file_to) == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", argv[2]), exit(100);
+}
+if (close(file_from) == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", argv[1]), exit(100);
+}
 return (0);
 }
