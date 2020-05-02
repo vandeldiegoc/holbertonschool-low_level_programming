@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 /**
- * struct dlistint_s - doubly linked list
+ * struct listint_s - doubly linked list
  * @n: integer
  * @prev: previous node
  * @next: next node
