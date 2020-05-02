@@ -5,6 +5,15 @@
 #include <string.h>
 #include <stdio.h>
 
+/**
+ * struct dlistint_s - doubly linked list
+ * @n: integer
+ * @prev: previous node
+ * @next: next node
+ *
+ * Description: doubly linked list node structure
+ * for Holberton project
+ */
 typedef struct listint_s
 {
 int n;
