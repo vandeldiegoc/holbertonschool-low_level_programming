@@ -25,7 +25,7 @@ new = add_dnodeint(h, n);
 return (new);
 }
 
-for (i = 1; i < idx; i++)
+for (i = 0; i < idx - 1; i++)
 {
 if (temp == NULL)
 {
