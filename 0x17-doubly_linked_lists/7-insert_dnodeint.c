@@ -22,7 +22,6 @@ new->n = n;
 new->next = NULL;
 if (idx == 0)
 {
-
 free(new);
 new = add_dnodeint(h, n);
 return (new);
@@ -33,7 +32,9 @@ if (i == idx - 1)
 {
 if (temp->next == NULL)
 {
-return (add_dnodeint_end(h, n));
+free(new);
+new = (add_dnodeint_end(h, n));
+return (new);
 }
 new->next = temp->next;
 new->prev = temp;
@@ -41,10 +42,9 @@ new->next->prev = new;
 temp->next = new;
 return (new);
 }
-
 else
 temp = temp->next;
 }
-
+return (new);
 return (NULL);
 }
