@@ -20,10 +20,7 @@ if (new == NULL)
 
 if (idx == 0)
 {
-new->prev = NULL;
-new->next = temp;
-temp->prev = new;
-*h = new;
+new->add_dnodeint(h, n);
 return (new);
 }
 for (i = 1; i < idx; i++)
