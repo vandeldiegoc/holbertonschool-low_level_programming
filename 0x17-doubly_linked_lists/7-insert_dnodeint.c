@@ -15,6 +15,7 @@ if (*h == NULL)
 
 
 new = malloc(sizeof(dlistint_t));
+
 if (new == NULL)
 	return (NULL);
 
@@ -29,7 +30,6 @@ if (i == idx - 1)
 {
 if (temp->next == NULL)
 {
-free(new);
 return (add_dnodeint_end(h, n));
 }
 new->next = temp->next;
