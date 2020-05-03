@@ -12,8 +12,6 @@ unsigned int i;
 dlistint_t *temp = *h, *new;
 if (*h == NULL)
 	return (NULL);
-new = malloc(sizeof(dlistint_t));
-new->n = n;
 
 if (new == NULL)
 	return (NULL);
@@ -23,6 +21,9 @@ if (idx == 0)
 new = add_dnodeint(h, n);
 return (new);
 }
+new = malloc(sizeof(dlistint_t));
+new->n = n;
+
 for (i = 1; i < idx; i++)
 {
 if (temp == NULL)
