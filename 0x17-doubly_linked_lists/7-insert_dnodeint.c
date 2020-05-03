@@ -16,13 +16,14 @@ if (*h == NULL)
 if (new == NULL)
 	return (NULL);
 
+new = malloc(sizeof(dlistint_t));
+new->n = n;
+
 if (idx == 0)
 {
 new = add_dnodeint(h, n);
 return (new);
 }
-new = malloc(sizeof(dlistint_t));
-new->n = n;
 
 for (i = 1; i < idx; i++)
 {
