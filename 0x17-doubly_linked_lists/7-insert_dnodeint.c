@@ -13,7 +13,6 @@ dlistint_t *temp = *h, *new;
 if (*h == NULL)
 	return (NULL);
 
-
 new = malloc(sizeof(dlistint_t));
 
 if (new == NULL)
@@ -23,6 +22,8 @@ new->n = n;
 new->next = NULL;
 if (idx == 0)
 {
+
+free(new);
 new = add_dnodeint(h, n);
 return (new);
 }
@@ -44,5 +45,6 @@ return (new);
 else
 temp = temp->next;
 }
+
 return (NULL);
 }
