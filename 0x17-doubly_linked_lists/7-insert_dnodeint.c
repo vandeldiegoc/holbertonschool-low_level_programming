@@ -19,6 +19,8 @@ new = malloc(sizeof(dlistint_t));
 if (new == NULL)
 	return (NULL);
 
+new->n = n;
+new->next = NULL;
 if (idx == 0)
 {
 new = add_dnodeint(h, n);
@@ -34,8 +36,8 @@ return (add_dnodeint_end(h, n));
 }
 new->next = temp->next;
 new->prev = temp;
-temp->next = new;
 new->next->prev = new;
+temp->next = new;
 return (new);
 }
 
