@@ -20,6 +20,8 @@ temp = temp->next;
 }
 }
 new = malloc(sizeof(dlistint_t));
+if (new == NULL)
+	return NULL;
 new->n = n;
 new->next = temp->next;
 new->prev = temp;
