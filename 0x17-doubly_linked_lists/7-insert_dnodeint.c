@@ -18,8 +18,6 @@ new = malloc(sizeof(dlistint_t));
 if (new == NULL)
 	return (NULL);
 
-new->prev = NULL;
-new->next = NULL;
 new->n = n;
 if (idx == 0)
 {
@@ -30,7 +28,10 @@ return (new);
 for (i = 1; i < idx; i++)
 {
 if (temp == NULL)
+{
+free(new);
 return (NULL);
+}
 else
 {
 temp = temp->next;
