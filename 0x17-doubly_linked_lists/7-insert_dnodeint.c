@@ -20,7 +20,7 @@ if (new == NULL)
 
 if (idx == 0)
 {
-new->add_dnodeint(h, n);
+new = add_dnodeint(h, n);
 return (new);
 }
 for (i = 1; i < idx; i++)
