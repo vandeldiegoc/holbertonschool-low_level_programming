@@ -23,23 +23,24 @@ if (idx == 0)
 new = add_dnodeint(h, n);
 return (new);
 }
-
-for (i = 0; temp && i < idx - 1; i++)
+for (i = 0; temp && i < idx; i++)
+{
+if (i == idx - 1)
 {
 if (temp->next == NULL)
 {
 free(new);
 return (add_dnodeint_end(h, n));
 }
-else
-{
-temp = temp->next;
-}
-}
-
 new->next = temp->next;
 new->prev = temp;
 temp->next = new;
 new->next->prev = new;
 return (new);
+}
+
+else
+temp = temp->next;
+}
+return (NULL);
 }
