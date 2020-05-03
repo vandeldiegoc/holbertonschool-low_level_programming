@@ -45,6 +45,6 @@ return (new);
 else
 temp = temp->next;
 }
-return (new);
+free(new);
 return (NULL);
 }
