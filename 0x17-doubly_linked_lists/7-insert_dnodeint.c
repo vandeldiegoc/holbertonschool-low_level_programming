@@ -18,19 +18,18 @@ new = malloc(sizeof(dlistint_t));
 if (new == NULL)
 	return (NULL);
 
-new->n = n;
 if (idx == 0)
 {
 new = add_dnodeint(h, n);
 return (new);
 }
 
-for (i = 0; i < idx - 1; i++)
+for (i = 0; temp && i < idx - 1; i++)
 {
-if (temp == NULL)
+if (temp->next == NULL)
 {
 free(new);
-return (NULL);
+return (add_dnodeint_end(h, n));
 }
 else
 {
