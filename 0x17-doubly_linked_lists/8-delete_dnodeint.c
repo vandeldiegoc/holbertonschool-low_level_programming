@@ -30,6 +30,8 @@ ptr->next->prev = ptr->prev;
 if (ptr->prev != NULL)
 ptr->prev->next = ptr->next;
 
+if (ptr == NULL)
+return (-1);
 free(ptr);
 return (1);
 }
