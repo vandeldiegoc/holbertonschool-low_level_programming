@@ -26,12 +26,12 @@ if (*head == ptr)
 
 if (ptr->next != NULL)
 ptr->next->prev = ptr->prev;
+else 
+return (-1);
 
 if (ptr->prev != NULL)
 ptr->prev->next = ptr->next;
 
-if (ptr == NULL)
-return (-1);
 free(ptr);
 return (1);
 }
