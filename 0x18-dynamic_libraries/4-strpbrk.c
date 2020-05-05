@@ -1,25 +1,26 @@
 #include "holberton.h"
 
 /**
- * *_strpbrk - is a funtion.
- * @accept: is a variable
- * @s: is a variable
- * Return: a
+ * _strpbrk - finds the first character in the string
+ * @s: pointer array to be searched
+ * @accept: pointer array with char to be searched
+ * Return: length of characters found
  */
 
 char *_strpbrk(char *s, char *accept)
 {
-int a, b;
-for (a = 0; s[a] != 0; a++)
-{
-for (b = 0; accept[b] != 0; b++)
-{
-if (s[a] == accept[b])
-{
-return (s + a);
-}
 
-}
+int a;
+
+for (; *s != '\0'; s++)
+{
+	for (a = 0; accept[a] != '\0'; a++)
+	{
+		if (*s == accept[a])
+		{
+			return (s);
+		}
+	}
 }
 return (0);
 }

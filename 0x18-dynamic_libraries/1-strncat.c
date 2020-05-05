@@ -1,22 +1,20 @@
 #include "holberton.h"
 /**
- * _strncat- is a funtion.
- * @dest: is a variable
- * @src: is a variable
- * @n: is a variable
- * Return: dest
+ *_strncat - concatenate two strings
+ *@dest: destination concatenate
+ *@src: source concatenate
+ *@n: int type
+ *Return: concatenate two string same strcat
  */
 char *_strncat(char *dest, char *src, int n)
 {
-int a = 0, b = 0;
-for (a = 0; dest[a] != '\0'; a++)
-{
-}
-while (src[b] != '\0' && b < n)
-{
-dest[a] = src[b];
-a++;
-b++;
-}
+int dest_len;
+int j;
+dest_len = _strlen(dest);
+
+for (j = 0 ; j < n && src[j] != '\0' ; j++)
+dest[dest_len + j] = src[j];
+dest[dest_len + j] = '\0';
+
 return (dest);
 }

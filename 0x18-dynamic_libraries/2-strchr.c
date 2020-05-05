@@ -1,28 +1,27 @@
 #include "holberton.h"
 
 /**
- * *_strchr - is a funtion.
- * @c: is a variable
- * @s: is a variable
- * Return: s
+ * _strchr - locates a character in a string.
+ * @s: pointer to array
+ * @c: char type
+ *
+ * Return: arrayed at check
  */
+
 char *_strchr(char *s, char c)
 {
-int a;
-for (a = 0; s[a] != 0; a++)
-{
-if (s[a] == c)
-{
-return (s + a);
-}
 
-}
-if (s[a] == c)
+while (*s != '\0')
 {
-return (s + a);
+	if (*s == c)
+	return (s);
+	s++;
 }
-else
+if (c == '\0')
 {
-return (0);
+	return (s);
 }
+s = 0;
+return (s);
+
 }

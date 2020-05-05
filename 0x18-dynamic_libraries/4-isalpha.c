@@ -1,25 +1,14 @@
 #include "holberton.h"
+
 /**
- *_isalpha -  is a funcion
- *@c: is a variable
- *Return: 1 if c is lowercase,  0 otherwise
+ *_isalpha - check the code for Holberton School students.
+ *@c: is char type
+ * Return: Always 0.
  */
 int _isalpha(int c)
 {
-if (c >= 'a' && c <= 'z')
-{
-return (1);
-}
-else if (c >= 'A' && c <= 'Z')
-{
-return (1);
-}
+if ((c > 64 && c < 91) || (c > 96 && c < 123))
+	return (1);
 else
-{
-return (0);
+	return (0);
 }
-
-_putchar('\n');
-
-}
-
