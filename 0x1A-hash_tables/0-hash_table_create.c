@@ -25,6 +25,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	hash_array->array = &node_array;
 	hash_array->size = size;
-
-return (hash_array);
+	return (hash_array);
 }
