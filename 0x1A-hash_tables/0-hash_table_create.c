@@ -7,7 +7,7 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *hash_array;
-	hash_node_t *node_array = NULL;
+
 	/* table creation */
 	hash_array = malloc(sizeof(hash_table_t));
 		if (hash_array == NULL)
@@ -16,14 +16,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 		}
 
 	/* string pieces */
-	node_array = calloc(sizeof(hash_node_t), size);
-	if (node_array == NULL)
+	hash_array->array = calloc(size, sizeof(hash_node_t));
+	if (hash_array->array == NULL)
 	{
 		free(hash_array);
 		return (NULL);
 	}
 
-	hash_array->array = &node_array;
 	hash_array->size = size;
 	return (hash_array);
 }
