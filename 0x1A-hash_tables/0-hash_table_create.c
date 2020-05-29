@@ -4,12 +4,6 @@
  * @size: size of array
  * Return: Always EXIT_SUCCESS.
  */
-#include "hash_tables.h"
-/**
- * hash_table_create - create a new hash table.
- * @size: size of array
- * Return: Always EXIT_SUCCESS.
- */
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *hash_array;
@@ -22,7 +16,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		}
 
 	/* string pieces */
-	node_array = malloc(sizeof(hash_node_t *) * size);
+	node_array = malloc(size * sizeof(hash_node_t *));
 	if (node_array == NULL)
 	{
 		free(hash_array);
