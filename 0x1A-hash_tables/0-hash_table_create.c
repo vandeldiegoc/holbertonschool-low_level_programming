@@ -27,11 +27,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_array->array = &node_array;
 	hash_array->size = size;
 
-while (i < size)
+	while (i < size)
 	{
 		hash_array->array[i] = NULL;
 		i++;
 	}
-
-	return (hash_array);
+return (hash_array);
 }
