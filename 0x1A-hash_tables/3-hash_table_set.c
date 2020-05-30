@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - put new_node_node into hash table
+ * hash_table_set - put new_node_node_node into hash table
  * @ht: hash table
  * @key: key hash table
  * @value: value
@@ -36,4 +36,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
                         return (1);
                 }
         }
-
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
+	return (1);
+}
