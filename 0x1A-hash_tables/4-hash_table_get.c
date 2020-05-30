@@ -13,7 +13,8 @@ unsigned long int idx;
 idx = key_index((unsigned char *)key, ht->size);
 if (ht->array == NULL || ht == NULL || key == NULL)
 return (NULL);
-
+if (ht->array[idx])
+{
 while (ht->array[idx] != NULL)
 {
 if (strcmp(ht->array[idx]->key, key) == 0)
@@ -21,6 +22,7 @@ if (strcmp(ht->array[idx]->key, key) == 0)
 return (ht->array[idx]->value);
 }
 ht->array[idx] = ht->array[idx]->next;
+}
 }
 return (NULL);
 }
