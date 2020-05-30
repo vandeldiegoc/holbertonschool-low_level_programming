@@ -6,7 +6,8 @@
  * @key: key hash table
  * @value: value
  * Return: Always EXIT_SUCCESS.
- */
+*/
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -22,9 +23,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(temp->key, key) == 0)
 		{
 			temp->value = strdup(value);
-			if (temp->value == NULL)
-				return (0);
-			else
 				return (1);
 		}
 		temp = temp->next;
@@ -39,6 +37,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node->value = strdup(value);
 	node->next = ht->array[index];
 	ht->array[index] = node;
-
-return (1);
+	return (1);
 }
+
