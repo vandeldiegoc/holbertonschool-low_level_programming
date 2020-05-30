@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - put node into hash table
+ * hash_table_set - put new_node into hash table
  * @ht: hash table
  * @key: key hash table
  * @value: value
@@ -11,32 +11,31 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t  *node = NULL, *temp;
+	hash_node_t  *new_node = NULL;
 
 	if (!ht || !key || !*key || !value)
 		return (0);
 
 	index = key_index((unsigned char *)key, ht->size);
-	temp = ht->array[index];
-	while (temp != NULL)
+	new_node = ht->array[index];
+	while (new_node)
 	{
-		if (strcmp(temp->key, key) == 0)
+		if (strcmp(new_node->key, key) == 0)
 		{
-			free(temp->value);
-			temp->value = strdup(value);
-				return (1);
+			free(new_node->value);
+			new_node->value = strdup(value);
+			return (1);
 		}
-		temp = temp->next;
+		new_node = new_node->next;
 	}
-
-	node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
 	{
 		return (0);
 	}
-	node->key = strdup(key);
-	node->value = strdup(value);
-	node->next = ht->array[index];
-	ht->array[index] = node;
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
 return (1);
 }
