@@ -14,5 +14,6 @@ int main(void)
 
     ht = hash_table_create(1024);
     hash_table_set(ht, "betty", "holberton");
+    printf("2");
     return (EXIT_SUCCESS);
 }
